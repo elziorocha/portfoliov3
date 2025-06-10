@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Github, Linkedin, LucideAngularModule, Mail, MessageCircleMore, Terminal } from 'lucide-angular';
 
 @Component({
@@ -15,7 +15,7 @@ export class HeaderComponent {
   readonly mailIcon = Mail;
   readonly githubIcon = Github;
 
-  linksContato = [
+  public linksContato = signal([
     {
       href: "https://api.whatsapp.com/send?phone=5542984018839",
       label: "Whatsapp",
@@ -36,5 +36,5 @@ export class HeaderComponent {
       label: "Github",
       icon: this.githubIcon
     }
-  ];
+  ]);
 }

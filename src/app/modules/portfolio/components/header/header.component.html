@@ -1,36 +1,43 @@
-<header class="bg-primary text-primary h-screen px-52 py-8 flex flex-col gap-8">
+<header class=" px-52 py-8 flex flex-col gap-8">
 
-  <h1 class="text-center text-5xl text-white font-bold">WEB PORTFOLIO</h1>
+  <h1 class="text-center text-5xl text-neutral-200 font-bold">WEB PORTFOLIO</h1>
 
   <main class="shadow-header bg-secondary rounded px-8 py-10 flex gap-4 w-full">
-    <section class="flex flex-col gap-4 w-5/12">
-      <div class="bg-primary font-semibold px-4 flex items-center justify-between py-2 text-secondary">
+    <section class="flex flex-col gap-5 w-5/12">
+      <div class="bg-primary font-semibold px-4 flex items-center justify-between py-2 text-darkText shadow-md">
         <span>©All Copyrights for &#64;elziorocha</span>
         <time>2025</time>
       </div>
 
-      <div class="border-4 border-primary flex items-center justify-center py-12">
+      <div class="border-4 border-primary flex items-center justify-center py-8 shadow-lg">
         <span class="text-left font-bold text-[90px] tracking-tighter -space-y-10">
           <h2>ENZO ROCHA</h2>
           <H3>WEB DEV</H3>
         </span>
       </div>
 
-      <section class="flex flex-col gap-4">
-        <div class="flex items-center gap-2">
-          <lucide-angular [img]="terminalIcon" class="size-14 self-end"></lucide-angular>
-          <div class="flex flex-col -space-y-1">
-            <h4 class="text-lg">Software Engineer</h4>
-            <h3 class="text-3xl">Fullstack Dev</h3>
+      <section class="flex gap-4 h-full">
+        <div class="flex flex-col justify-between">
+          <div class="flex items-center gap-2 mt-4">
+            <lucide-angular [img]="terminalIcon" class="size-14 self-end"></lucide-angular>
+            <div class="flex flex-col -space-y-1">
+              <h4 class="text-lg">Software Engineer</h4>
+              <h3 class="text-3xl">Fullstack Dev</h3>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            @for(item of linksContato(); track item) {
+            <a [href]="item.href" class="bg-primary text-darkText pl-2 pr-18 py-2 flex gap-2 items-center border-4 border-transparent
+          hover:bg-secondary hover:text-primary hover:border-primary transition-colors shadow-sm">
+              <lucide-angular [img]="item.icon" class="size-6"></lucide-angular>
+              <p>{{ item.label }}</p>
+            </a>
+            }
           </div>
         </div>
 
-        <div class="grid grid-cols-2 gap-4">
-          <a *ngFor="linksContato" [href]="linksContato.href" ...>
-            <lucide-angular [img]="linksContato.icon" ...></lucide-angular>
-            <p>{{ linksContato.label }}</p>
-          </a>
-        </div>
+        <img src="/images/image.png" alt="" class="h-full w-40">
 
       </section>
     </section>
@@ -48,7 +55,7 @@
     </section>
 
     <section class="flex flex-col gap-4 w-3/12">
-      <img src="/images/image.png" alt="Foto de perfil" class="h-96">
+      <img src="/images/stars.png" alt="Foto de perfil" class="h-96 object-cover">
 
       <img src="/images/image.png" alt="Foto de perfil" class="h-50">
     </section>

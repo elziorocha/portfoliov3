@@ -6,6 +6,7 @@
 
   --color-primary: #ed1c24;
   --color-secondary: #262626;
+  --color-darkText: #18181b;
 }
 
 @layer utilities {
@@ -15,5 +16,9 @@
 }
 
 * {
-  @apply font-header
+  @apply font-header;
+}
+
+body {
+  @apply bg-primary text-primary;
 }
