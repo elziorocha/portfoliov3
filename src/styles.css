@@ -4,8 +4,11 @@
 @theme {
   --font-header: "Allerta Stencil", sans-serif;
 
-  --color-primary: #ed1c24;
+  --color-primary: #db1a22;
   --color-secondary: #262626;
+  
+  --color-thumb: #8a0f14;
+
   --color-darkText: #18181b;
 }
 
@@ -14,7 +17,10 @@
     box-shadow: 0px 6px 14px 6px black;
   }
   .shadow-stack {
-    box-shadow: 14px 16px 1px -6px black
+    box-shadow: 14px 16px 1px -6px black;
+  }
+  .text-shadow-md {
+    text-shadow: 3px 3px 1px black;
   }
 }
 
@@ -24,4 +30,12 @@
 
 body {
   @apply bg-primary text-primary;
+}
+
+::-webkit-scrollbar {
+  @apply w-2 bg-black p-1;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-thumb;
 }

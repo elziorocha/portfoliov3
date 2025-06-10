@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { IstackTech } from '../../interface/stackTechs.interface';
 
 @Component({
   selector: 'app-stack',
@@ -9,7 +10,7 @@ import { Component, signal } from '@angular/core';
 
 export class StackComponent {
 
-  public stackTechs = signal([
+  public stackTechs = signal<IstackTech[]>([
     {
       src: '/icons/html.svg',
       color: 'hover:bg-orange-700'
