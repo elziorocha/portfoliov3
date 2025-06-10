@@ -13,8 +13,8 @@
   .shadow-header {
     box-shadow: 0px 6px 14px 6px black;
   }
-  .inset-stack {
-    box-shadow: inset 0px 0px 10px 2px black;
+  .shadow-stack {
+    box-shadow: 14px 16px 1px -6px black
   }
 }
 
