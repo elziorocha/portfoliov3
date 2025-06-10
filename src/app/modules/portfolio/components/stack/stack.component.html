@@ -1,7 +1,7 @@
 <main class="flex flex-col gap-8 items-center">
   <h2 class="text-darkText text-6xl font-bold tracking-tight">Stack</h2>
 
-  <section class="bg-secondary max-w-3xl px-8 py-6 flex flex-wrap gap-x-6 gap-y-3 justify-center shadow-stack">
+  <section class="bg-secondary max-w-4xl px-8 py-6 flex flex-wrap gap-x-6 gap-y-4 justify-center shadow-stack">
     @for (item of stackTechs(); track item) {
     <img [src]="item.src" alt="teste" [ngClass]="item.color"
       class="size-16 transition-colors rounded-md cursor-pointer p-1 " />
