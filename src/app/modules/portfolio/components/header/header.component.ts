@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { Github, Linkedin, LucideAngularModule, Mail, MessageCircleMore, Terminal } from 'lucide-angular';
+import { IlinksContato } from '../../interface/linksContato.interface';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +16,7 @@ export class HeaderComponent {
   readonly mailIcon = Mail;
   readonly githubIcon = Github;
 
-  public linksContato = signal([
+  public linksContato = signal<IlinksContato[]>([
     {
       href: "https://api.whatsapp.com/send?phone=5542984018839",
       label: "Whatsapp",
