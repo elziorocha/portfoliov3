@@ -1,1 +1,38 @@
-<p class="text-darkText">projects works!</p>
+<main class="flex flex-wrap gap-6 px-10 justify-center mt-12 relative bg-neutral-500 py-8 shadow-projects">
+  <div class="absolute w-120 h-96 bg-zinc-900 left-0 top-52"></div>
+  <div class="absolute w-72 h-88 bg-zinc-900 right-0 -top-24"></div>
+
+  @for (item of projects(); track item) {
+  <section
+    class="group bg-secondary text-neutral-950 hover:text-primary p-6 flex gap-8 overflow-hidden relative hover:-translate-y-4 transition-all shadow-xl">
+    <div class="absolute w-38 h-32 bg-zinc-900 right-0 -bottom-14"></div>
+    <div class="absolute size-32 bg-zinc-900 left-52 top-0"></div>
+
+    <img [src]="item.src" alt="imagem do projeto"
+      class="object-cover size-72 shadow-md z-50 rounded-md border-4 border-zinc-950 group-hover:border-primary">
+
+    <div class="w-96 flex flex-col justify-between  z-50">
+      <div class="flex flex-col gap-5">
+        <h2 class="text-xl font-bold ">{{ item.title}}</h2>
+
+        <p class="text-justify text-lg leading-6">{{ item.excerpt}}</p>
+      </div>
+
+      <div class="flex justify-between items-center">
+        <span class="flex flex-wrap gap-2 w-8/12 px-2">
+          @for (icon of item.stack; track icon) {
+          <img [src]="icon" alt="ferramenta utilizada no projeto"
+            class="size-8 bg-transparent rounded group-hover:bg-primary p-0.5">
+          }
+        </span>
+
+        <a [href]="item.link" target="_blank" rel="noopener noreferrer"
+          class="flex items-center py-0.5 pl-2 cursor-pointer rounded bg-neutral-700 hover:shadow-lg transition-all self-end">
+          <h3 class="tracking-tight text-lg">Ver mais</h3>
+          <lucide-angular [img]="chevronRightIcon" class="size-7"></lucide-angular>
+        </a>
+      </div>
+    </div>
+  </section>
+  }
+</main>

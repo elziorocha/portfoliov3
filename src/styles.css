@@ -19,6 +19,9 @@
   .shadow-stack {
     box-shadow: 14px 16px 1px -6px black;
   }
+  .shadow-projects {
+    box-shadow: inset 0 0 14px 6px black;
+  }
   .text-shadow-md {
     text-shadow: 3px 3px 1px black;
   }
