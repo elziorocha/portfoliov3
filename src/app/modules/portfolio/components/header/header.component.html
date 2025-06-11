@@ -1,25 +1,35 @@
-<header class=" px-52 py-8 flex flex-col gap-8">
-
-  <h1 class="text-center text-5xl text-secondary font-bold text-shadow-md">WEB PORTFOLIO</h1>
+<header class="px-52 py-8 flex flex-col gap-8">
+  <h1 class="text-center text-5xl text-secondary font-bold text-shadow-md">
+    WEB PORTFOLIO
+  </h1>
 
   <main class="shadow-header bg-secondary rounded px-8 py-10 flex gap-4 w-full">
     <section class="flex flex-col gap-5 w-5/12">
-      <div class="bg-primary font-semibold px-4 flex items-center justify-between py-2 text-darkText shadow-md">
+      <div
+        class="bg-primary font-semibold px-4 flex items-center justify-between py-2 text-darkText shadow-md"
+      >
         <span>©All Copyrights for &#64;elziorocha</span>
         <time>2025</time>
       </div>
 
-      <div class="border-4 border-primary flex items-center justify-center py-8 shadow-lg">
-        <span class="text-left font-bold text-[90px] tracking-tighter -space-y-10">
+      <div
+        class="border-4 border-primary flex items-center justify-center py-8 shadow-lg"
+      >
+        <span
+          class="text-left font-bold text-[90px] tracking-tighter -space-y-10"
+        >
           <h2>ENZO ROCHA</h2>
           <H3>WEB DEV</H3>
         </span>
       </div>
 
-      <section class="flex gap-4 h-full">
-        <div class="flex flex-col justify-between">
+      <section class="flex gap-4">
+        <div class="flex flex-col justify-around">
           <div class="flex items-center gap-2 mt-4">
-            <lucide-angular [img]="terminalIcon" class="size-14 self-end"></lucide-angular>
+            <lucide-angular
+              [img]="terminalIcon"
+              class="size-14 self-end"
+            ></lucide-angular>
             <div class="flex flex-col -space-y-1">
               <h4 class="text-lg">Software Engineer</h4>
               <h3 class="text-3xl">Fullstack Dev</h3>
@@ -28,8 +38,10 @@
 
           <div class="grid grid-cols-2 gap-3">
             @for(item of linksContato(); track item) {
-            <a [href]="item.href" class="bg-primary text-darkText pl-2 pr-18 py-2 flex gap-2 items-center border-4 border-transparent
-          hover:bg-secondary hover:text-primary hover:border-primary transition-colors shadow-sm">
+            <a
+              [href]="item.href"
+              class="bg-primary text-darkText pl-2 pr-18 py-2 flex gap-2 items-center border-4 border-transparent hover:bg-secondary hover:text-primary hover:border-primary transition-colors shadow-sm"
+            >
               <lucide-angular [img]="item.icon" class="size-6"></lucide-angular>
               <p>{{ item.label }}</p>
             </a>
@@ -37,13 +49,21 @@
           </div>
         </div>
 
-        <img src="/images/image.png" alt="" class="h-full w-40">
-
+        <img
+          src="/images/teste.gif"
+          alt=""
+          class="h-72 mt-6 w-40 object-cover self-end border-2 border-primary"
+        />
       </section>
     </section>
 
     <section class="flex flex-col gap-6 w-4/12">
-      <img src="/images/image.png" alt="Foto de perfil" class="h-full">
+      <img
+        src="/images/foto1.JPEG"
+        alt="Foto de perfil"
+        class="h-full shadow-xl border-2 border-primary"
+      />
+
       <div class="flex justify-between px-2 font-bold">
         <div>
           <h3 class="text-xl">Portfolio v3</h3>
@@ -55,10 +75,17 @@
     </section>
 
     <section class="flex flex-col gap-4 w-3/12">
-      <img src="/images/image.png" alt="Foto de perfil" class="h-96 object-cover">
+      <img
+        src="/images/redWaves.png"
+        alt="Foto de perfil"
+        class="h-120 object-cover border-2 border-primary shadow-lg"
+      />
 
-      <img src="/images/image.png" alt="Foto de perfil" class="h-50">
+      <img
+        src="/images/warning.png"
+        alt="Foto de perfil"
+        class="h-50 object-cover border-2 border-primary shadow-lg"
+      />
     </section>
   </main>
-
 </header>
