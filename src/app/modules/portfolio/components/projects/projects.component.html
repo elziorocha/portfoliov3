@@ -16,7 +16,9 @@
 
       <div class="w-96 flex flex-col justify-between  z-50">
         <div class="flex flex-col gap-5">
-          <h2 class="text-xl font-bold ">{{ item.title }}</h2>
+          <a [href]="item.link" target="_blank" rel="noopener noreferrer" class="text-xl font-bold ">
+            {{ item.title }}
+          </a>
 
           <p class="text-justify text-lg leading-6">{{ item.excerpt }}</p>
         </div>

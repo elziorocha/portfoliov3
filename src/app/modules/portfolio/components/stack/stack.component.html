@@ -3,8 +3,15 @@
 
   <section class="bg-secondary max-w-4xl px-8 py-6 flex flex-wrap gap-x-6 gap-y-4 justify-center shadow-stack">
     @for (item of stackTechs(); track item) {
-    <img [src]="item.src" alt="teste" [ngClass]="item.color"
-      class="size-16 transition-colors rounded-md cursor-pointer p-1 " />
+    <div class="relative group">
+      <img [src]="item.src" alt="teste" [ngClass]="item.color"
+        class="size-16 transition-colors rounded-md cursor-pointer p-1 " />
+
+      <span [ngClass]="item.color" class="mb-2 px-3 py-1 bg-darkText font-semibold rounded shadow-md whitespace-nowrap
+        absolute bottom-full left-1/2 -translate-x-1/2 hidden group-hover:block transition-all z-30">
+        {{ item.label }}
+      </span>
+    </div>
     }
   </section>
 </main>
